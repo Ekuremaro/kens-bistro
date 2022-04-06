@@ -1,33 +1,31 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { BsCartPlusFill } from "react-icons/bs";
+import { BsCartCheckFill } from "react-icons/bs";
+import { GrFavorite } from "react-icons/gr";
 
-export default function Meal() {
+const Meal = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+    <div className=" bg-gray-300 h-60 rounded-md p-3 min-w-max shadow-md relative overflow-hidden  ">
+      {" "}
+      <img
+        src="https://www.thefooddictator.com/wp-content/uploads/2015/11/egusi-soup-23-1-4.jpg"
+        style={{ height: "100px" }}
+        alt=""
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Add to Cart</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+      <h3>Egusi Soup</h3>
+      <div className="flex justify-between">
+        <p>NGN 3500</p>
+        <button>
+          <GrFavorite />
+        </button>
+      </div>
+      <div className=" flex justify-center pt-4">
+        <button className="inline-block py-1 px-4 rounded-md text-white bg-gray-600">
+          Add to cart
+        </button>
+      </div>
+    </div>
   );
-}
+};
+
+export default Meal;
